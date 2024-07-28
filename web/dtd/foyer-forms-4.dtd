@@ -20,6 +20,7 @@
     type CDATA #REQUIRED
     id CDATA #IMPLIED
     label CDATA #IMPLIED
+    src CDATA #IMPLIED
     pos CDATA #REQUIRED
     width CDATA #REQUIRED
 >
