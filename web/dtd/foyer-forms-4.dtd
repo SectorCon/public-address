@@ -4,8 +4,10 @@
 <!ELEMENT footer (row)>
 <!ELEMENT page (row+)>
 <!ATTLIST page
-    xmargin CDATA #REQUIRED
-    ymargin CDATA #REQUIRED
+    format CDATA #REQUIRED
+    left CDATA #REQUIRED
+    top CDATA #REQUIRED
+    bottom CDATA #REQUIRED
     xspace CDATA #REQUIRED
     yspace CDATA #REQUIRED
     cols CDATA #REQUIRED
