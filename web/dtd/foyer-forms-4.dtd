@@ -1,26 +1,31 @@
-<!ELEMENT form (frame, page)>
+<!ELEMENT form (frame*, page+)>
 <!ELEMENT frame (header, footer)>
-<!ELEMENT header (row)>
-<!ELEMENT footer (row)>
+<!ELEMENT header (row+)>
+<!ELEMENT footer (row+)>
 <!ELEMENT page (row+)>
 <!ATTLIST page
     format CDATA #REQUIRED
-    left CDATA #REQUIRED
-    top CDATA #REQUIRED
-    bottom CDATA #REQUIRED
-    xspace CDATA #REQUIRED
-    yspace CDATA #REQUIRED
-    cols CDATA #REQUIRED
-    rows CDATA #REQUIRED
+    left CDATA #IMPLIED
+    top CDATA #IMPLIED
+    bottom CDATA #IMPLIED
+    xspace CDATA #IMPLIED
+    yspace CDATA #IMPLIED
+    cols CDATA #IMPLIED
+    rows CDATA #IMPLIED
 >
 
 <!ELEMENT row (cell+)>
-
-<!ELEMENT cell (#PCDATA)>
+<!ELEMENT cell (#PCDATA|script)*>
 <!ATTLIST cell
     type CDATA #REQUIRED
-    id ID #IMPLIED
+    id CDATA #IMPLIED
     label CDATA #IMPLIED
     pos CDATA #REQUIRED
     width CDATA #REQUIRED
+>
+
+<!ELEMENT script EMPTY>
+<!ATTLIST script
+    src CDATA #REQUIRED
+    type CDATA #REQUIRED
 >
