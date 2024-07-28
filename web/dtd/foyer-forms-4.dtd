@@ -1,0 +1,24 @@
+<!ELEMENT form (frame, page)>
+<!ELEMENT frame (header, footer)>
+<!ELEMENT header (row)>
+<!ELEMENT footer (row)>
+<!ELEMENT page (row+)>
+<!ATTLIST page
+    xmargin CDATA #REQUIRED
+    ymargin CDATA #REQUIRED
+    xspace CDATA #REQUIRED
+    yspace CDATA #REQUIRED
+    cols CDATA #REQUIRED
+    rows CDATA #REQUIRED
+>
+
+<!ELEMENT row (cell+)>
+
+<!ELEMENT cell (#PCDATA)>
+<!ATTLIST cell
+    type CDATA #REQUIRED
+    id ID #IMPLIED
+    label CDATA #IMPLIED
+    pos CDATA #REQUIRED
+    width CDATA #REQUIRED
+>
