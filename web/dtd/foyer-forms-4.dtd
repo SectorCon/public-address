@@ -13,14 +13,20 @@
     cols CDATA #IMPLIED
     rows CDATA #IMPLIED
 >
+<!ELEMENT part (#PCDATA|script)* >
+<!ATTLIST part
+    src CDATA #REQUIRED    
+>
 
 <!ELEMENT row (cell+)>
+
 <!ELEMENT cell (#PCDATA|script)*>
 <!ATTLIST cell
     type CDATA #REQUIRED
     id CDATA #IMPLIED
     label CDATA #IMPLIED
     src CDATA #IMPLIED
+    key CDATA #IMPLIED
     pos CDATA #REQUIRED
     width CDATA #REQUIRED
 >
